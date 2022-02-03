@@ -1,7 +1,7 @@
 ---
 
 - name: MY FIRST PLAYBOOK
-  hosts: R1
+  hosts: cisco_devices
   gather_facts: false
   connection: network_cli
 
