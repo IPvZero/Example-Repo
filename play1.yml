@@ -9,9 +9,9 @@
     - name: "OSPF CONFIG"
       cisco.ios.ios_config:
         lines:
-          - router-id 33.14.88.22
+          - router-id 33.14.88.99
         parents:
-          - router ospf 121
+          - router ospf 99
       register: my_output
 
     - debug: var=my_output
