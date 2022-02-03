@@ -6,12 +6,9 @@
   connection: network_cli
 
   tasks:
-    - name: "OSPF CONFIG"
-      cisco.ios.ios_config:
-        lines:
-          - router-id 33.14.88.22
-        parents:
-          - router ospf 121
+    - name: run show version on remote devices
+      cisco.ios.ios_command:
+        commands: show version
       register: my_output
 
     - debug: var=my_output
