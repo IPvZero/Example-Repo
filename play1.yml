@@ -7,8 +7,8 @@
 
   tasks:
     - name: run show version on remote devices
-      ios_command:
-        commands: show ip interface brief
+      cisco.ios.ios_command:
+        commands: show version
       register: my_output
 
     - debug: var=my_output.stdout
