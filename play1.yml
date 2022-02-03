@@ -8,7 +8,7 @@
   tasks:
     - name: run show version on remote devices
       ios_command:
-        commands: show version
+        commands: show ip interface brief
       register: my_output
 
-    - debug: var=my_output
+    - debug: var=my_output.stdout
